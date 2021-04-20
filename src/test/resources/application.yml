@@ -1,18 +1,4 @@
-spring:
-  datasource:
-    url: jdbc:h2:mem:test
-    username: sa
-    password:
-    driver-class-name: org.h2.Driver
-
-  jpa:
-    hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-       # show_sql: true
-        format_sql: true
-
+#관련 설정이 없으면 알아서 인메모리로 작동하게 한다.
 logging:
   level:
     org.hibernate.SQL : debug
