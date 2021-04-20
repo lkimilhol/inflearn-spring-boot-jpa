@@ -15,6 +15,11 @@ public class MemberRepository {
     //스프링이 알아서 인젝션 해준다.
     private final EntityManager em;
 
+    public Long save(Member member) {
+        em.persist(member);
+        return member.getId();
+    }
+
     public Member findOne(Long id) {
         return em.find(Member.class, id);
     }

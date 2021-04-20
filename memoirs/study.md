@@ -24,3 +24,5 @@
 23. 생성자 인젝션의 경우 생성자가 딱 하나만 있는 경우에는 @Autowired 애노테이션이 없어도 알아서 인젝션 해준다.
 24. 그리고 서비스 안의 repository는 final로 하자! 그리고 롬복의 @RequiredArgsConstructor 사용하면 Final 필드만 생성자를 만들어준다!
 25. spring data jpa가 @PersistenceContext 애노테이션을 -> @Autowired로 만들어준다. 때문에 24번과 같이 롬복을 사용 할 수 있다!
+26. 테스트케이스에서 save -> persist 까지 가면 db에 반영이 안된다. 왜냐면 커밋이 되기 전이니까. 영속성에만 올라간것이다. 근데 테스트케이스에서 트랜잭셔날을 걸어뒀기 때문에 insert가 굳이 되지 않고 끝난다.
+27. 만약 db에 직접 넣고 싶으면 롤백을 false로 하거나 em.flush를 강제로 호출하면 db까지 들어갔다가 롤백이 되는것을 확인 할 수 있다.
