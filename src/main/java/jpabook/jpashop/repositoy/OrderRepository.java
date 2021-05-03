@@ -4,8 +4,10 @@ import jpabook.jpashop.domain.Order;
 import lombok.RequiredArgsConstructor;
 
 import javax.persistence.EntityManager;
-import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
+@Repository
 @RequiredArgsConstructor
 public class OrderRepository {
     private final EntityManager em;
