@@ -23,3 +23,6 @@ SELECT *
 FROM MEMBER M
 JOIN TEAM T ON M.TEAM_ID = T.ID
 ```   
+
+Team findTeam = member1.getTeam(); 처럼 객체는 참조를 사용해서 연관관계를 탐색할 수 있는데 이것을 객체 그래프 탐색이라 함
+
